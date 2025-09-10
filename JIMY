@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Horse Training</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.8;
+    }
+
+    /* HERO */
+    header {
+      background: url("images/hero.jpg") no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      text-shadow: 3px 3px 12px black;
+      padding: 0 1rem;
+    }
+    header h1 {
+      font-size: 4.5rem;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    header p {
+      font-size: 1.7rem;
+      margin: 1rem 0;
+      max-width: 700px;
+    }
+    .btn {
+      display: inline-block;
+      background: red;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 1rem;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      background: darkred;
+      transform: scale(1.05);
+    }
+
+    /* NAV */
+    nav {
+      background: #111;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid red;
+    }
+    nav a {
+      color: white;
+      margin: 0 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: red;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+      color: red;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+
+    /* GRID + CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #111;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 25px rgba(255,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1.5rem;
+    }
+    .card-content h3 {
+      margin-top: 0;
+      color: red;
+      font-size: 1.6rem;
+    }
+
+    /* FORM */
+    form {
+      max-width: 700px;
+      margin: auto;
+      background: #111;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255,0,0,0.5);
+    }
+    form label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    form button {
+      background: red;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    form button:hover {
+      background: darkred;
+      transform: scale(1.05);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      border-top: 2px solid red;
+    }
+    .socials a {
+      margin: 0 1rem;
+      color: red;
+      font-size: 1.8rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .socials a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header>
+    <h1>Elite Horse Training</h1>
+    <p>From fresh colts to seasoned horses — we build calm, willing partners through steady, proven training.</p>
+    <a href="#services" class="btn">See What We Do</a>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#methods">Methods</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p style="text-align:center; max-width:950px; margin:auto; font-size:1.2rem;">
+      At <strong>Elite Horse Training</strong>, we believe every colt or horse deserves patience, fairness, 
+      and training that makes sense to them. We don’t force or rush — we give them the time they need to 
+      understand what’s being asked. Our approach is built around trust, respect, and keeping things clear. 
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/service1.jpg" alt="Groundwork Training">
+        <div class="card-content">
+          <h3>Groundwork Training</h3>
+          <p>
+            A calm horse starts on the ground. We spend plenty of time teaching colts how to lead, tie, 
+            stand quietly, and move off pressure. Groundwork is where respect and communication are built. 
+            When a horse understands the basics on the ground, everything else becomes easier. 
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/service2.jpg" alt="Colt Starting">
+        <div class="card-content">
+          <h3>Colt Starting</h3>
+          <p>
+            Getting a colt started the right way makes all the difference. 
+            We start slow — saddling, handling, and introducing new experiences in small steps. 
+            Our focus is on keeping colts relaxed and curious, never scared. 
+            A good start means a horse that’s confident for life. 
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/service3.jpg" alt="Behavior Fixes">
+        <div class="card-content">
+          <h3>Behavior Fixes</h3>
+          <p>
+            Some horses pick up bad habits — biting, kicking, refusing to load, pulling away. 
+            Instead of punishment, we figure out <em>why</em> they’re doing it. 
+            Then we work with patience and repetition until the bad habit is replaced with 
+            better behavior. Every horse can learn to relax and do better. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODS -->
+  <section id="methods">
+    <h2>How We Train</h2>
+    <p style="text-align:center; max-width:950px; margin:auto; font-size:1.2rem;">
+      Training colts and older horses isn’t about force — it’s about building steps that make sense.  
+      Here’s how we approach it:
+    </p>
+    <div class="grid" style="margin-top:2rem;">
+      <div class="card">
+        <div class="card-content">
+          <h3>Step 1: Trust First</h3>
+          <p>
+            We start with simple handling — brushing, picking up feet, leading calmly. 
+            Once a colt trusts us on the ground, we can ask for more without stress. 
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Step 2: Clear Communication</h3>
+          <p>
+            Horses learn by release and pressure. We keep cues clear and reward the right try. 
+            This keeps the colt thinking and willing instead of confused or defensive. 
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Step 3: Small Wins</h3>
+          <p>
+            Training is broken down into small steps. 
+            A colt might learn to accept a saddle pad one day, 
+            then a light saddle the next. Each win builds confidence. 
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-content">
+          <h3>Step 4: Consistency</h3>
+          <p>
+            Horses remember routine. By keeping things steady, 
+            colts quickly figure out what’s expected and relax into the work. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <h2>Happy Horses, Happy Owners</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/testimonial1.jpg" alt="Horse testimonial">
+        <div class="card-content">
+          <p>
+            "Brought in my young colt — he came home calm, respectful, and easy to handle. 
+            They don’t just train horses, they build good minds."
+          </p>
+          <strong>- Jessica K.</strong>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/testimonial2.jpg" alt="Horse testimonial">
+        <div class="card-content">
+          <p>
+            "My horse wouldn’t load in a trailer at all. After some sessions, 
+            he walks in like it’s nothing. Huge stress off my shoulders."
+          </p>
+          <strong>- Mike L.</strong>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/testimonial3.jpg" alt="Horse testimonial">
+        <div class="card-content">
+          <p>
+            "They started my colt slow and right. 
+            No bucking, no fear — just steady progress. 
+            Couldn’t ask for a better start."
+          </p>
+          <strong>- Rachel S.</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Tell us about your colt or horse..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <p style="text-align:center; margin-top:2rem; font-size:1.2rem;">
+      📧 Email: <a href="mailto:info@elitehorsetraining.com" style="color:red;">info@elitehorsetraining.com</a>  
+      | 📞 Phone: <span style="color:red;">(555) 123-4567</span>  
+      | 📍 Location: 123 Meadow Lane, Horseville, USA
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Elite Horse Training | All Rights Reserved</p>
+    <div class="socials">
+      <a href="#">🐎</a>
+      <a href="#">📘</a>
+      <a href="#">📸</a>
+    </div>
+  </footer>
+
+</body>
+</html>
